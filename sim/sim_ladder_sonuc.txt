@@ -1,0 +1,8 @@
+30 gun, 200 deneme. Dis piyasa: yukari, yatay, asagi egilim. Kutu=1M DK
+ senaryo |       mod | satilan(M DK) | kacak(deger %) | durma(%saat) | son fiyat/dis fiyat
+  yukari |     sabit |            31 |           0.22 |        95.7 | %   8.9
+  yukari | kontrolcu |            50 |           0.26 |        93.1 | % -47.1
+   yatay |     sabit |             9 |           0.18 |        98.7 | %  35.0
+   yatay | kontrolcu |            40 |           0.17 |        94.5 | %  20.7
+   asagi |     sabit |             3 |           0.21 |        99.7 | % 175.7
+   asagi | kontrolcu |            15 |           0.14 |        97.9 | % 170.7

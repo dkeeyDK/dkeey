@@ -1,0 +1,14 @@
+Balinanin haftalik paydaki yuzdesi | k=balina cuzdani, e=tespitten kacan oran, fp=durust cuzdanlarin yanlis kumelenme orani
+k   e     | kume yok | kume (fp=0%) | kume (fp=10%)  [son sutun: durust alicilarin kaybi %]
+ 50 0.0   | % 14.4   | %  0.3       | %  0.4   (durust kayip % 0.4)
+ 50 0.5   | % 14.4   | %  7.9       | %  9.5   (durust kayip % 9.5)
+ 50 0.9   | % 14.4   | % 13.4       | % 15.7   (durust kayip %15.7)
+ 50 1.0   | % 14.4   | % 14.4       | % 16.8   (durust kayip %16.8)
+100 0.0   | % 25.1   | %  0.3       | %  0.4   (durust kayip % 0.4)
+100 0.5   | % 25.1   | % 14.5       | % 17.0   (durust kayip %17.0)
+100 0.9   | % 25.1   | % 23.3       | % 26.8   (durust kayip %26.8)
+100 1.0   | % 25.1   | % 25.1       | % 28.6   (durust kayip %28.6)
+200 0.0   | % 40.0   | %  0.3       | %  0.4   (durust kayip % 0.4)
+200 0.5   | % 40.0   | % 25.2       | % 28.7   (durust kayip %28.7)
+200 0.9   | % 40.0   | % 37.6       | % 41.9   (durust kayip %41.9)
+200 1.0   | % 40.0   | % 40.0       | % 44.4   (durust kayip %44.4)

@@ -1,0 +1,15 @@
+Yil 1: 1 yatirimci (100M USD). Yil 2 basinda 3 yatirimci daha (her biri 100M USD). Mevcut havuz 40M USD.
+Pay (NAV'a gore): yil 1 -> yatirimci1 %71 | yil 2 -> her yatirimci %23 (4x), mevcut havuz %9
+Ucret getirisi sermaye basina: yil 1 %15.6 -> yil 2 %5.0 (hacim sabit 20M USD/gun)
+
+  hacim buyumesi/yil |  Yatirimci 1 geri alim |  Yatirimci 2-4 geri alim
+                  0% |                >12 yil |     >12 yil (girisinden)
+                 50% |                5.2 yil |     4.7 yil (girisinden)
+                100% |                3.7 yil |     3.0 yil (girisinden)
+                200% |                2.7 yil |     1.9 yil (girisinden)
+
+Birikmis ucret geliri (yatirimin %'si): 1.yil sonu | 2.yil sonu | 3.yil sonu | 5.yil sonu
+  hacim buyume %  0: Y1: %15, %20, %25, %35 | Y2-4: -, %5, %10, %20
+  hacim buyume % 50: Y1: %19, %29, %42, %94 | Y2-4: -, %9, %23, %75
+  hacim buyume %100: Y1: %23, %37, %67, %242 | Y2-4: -, %15, %44, %219
+  hacim buyume %200: Y1: %29, %57, %142, %1152 | Y2-4: -, %28, %112, %1122

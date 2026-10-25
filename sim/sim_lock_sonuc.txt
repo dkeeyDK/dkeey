@@ -1,0 +1,18 @@
+Ortak ajan 100M USD LP, mevcut havuz 40M USD. Ortagin cikmak istedigi en kotu durum (cikis hakkini hemen kullanir).
+Kolon: o ayda 25M USD balina satisinda fiyat dususu | ortagin havuz payi
+  ay |                serbest |     1y kilit (ayda %2) |     1y kilit (ayda %5)
+   1 |         % 80  pay %  0 |         % 46  pay % 71 |         % 46  pay % 71
+   6 |         % 80  pay %  0 |         % 46  pay % 71 |         % 46  pay % 71
+  12 |         % 80  pay %  0 |         % 46  pay % 71 |         % 46  pay % 71
+  18 |         % 80  pay %  0 |         % 48  pay % 69 |         % 53  pay % 64
+  24 |         % 80  pay %  0 |         % 51  pay % 66 |         % 62  pay % 50
+  30 |         % 80  pay %  0 |         % 54  pay % 62 |         % 75  pay % 20
+  36 |         % 80  pay %  0 |         % 58  pay % 57 |         % 80  pay %  0
+  48 |         % 80  pay %  0 |         % 67  pay % 41 |         % 80  pay %  0
+
+Ortagin yillik ucret geliri (hacim 20M USD/gun, ucret %0.3, havuz payi orantili):
+           serbest: yil1  0.0M | yil2  0.0M | yil3  0.0M | yil4  0.0M USD
+          1y kilit: yil1 15.4M | yil2 14.8M | yil3 13.2M | yil4 10.6M USD
+    1y kilit hizli: yil1 15.4M | yil2 13.3M | yil3  4.0M | yil4  0.0M USD
+
+Ortagin orantili pay: yatirdigi / (yatirim + mevcut havuz) = 71% (tam aralik, kilitliyken sabit)

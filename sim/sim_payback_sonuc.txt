@@ -1,0 +1,16 @@
+1) Ortak hic cikmiyor, baska LP gelmiyor (havuz 140M USD, ortak payi %71). Gunluk hacim 20M USD'den buyuyor.
+   Yatirimi geri alma suresi (sadece ucret geliri, kayip ve fiyat degisimi haric):
+   hacim yillik buyume %  0: 6.5 yil
+   hacim yillik buyume % 50: 3.2 yil
+   hacim yillik buyume %100: 2.5 yil
+   hacim yillik buyume %200: 1.9 yil
+
+   Hacim 5M USD/gun ise (dusuk):
+   hacim yillik buyume %  0: 20 yildan uzun
+   hacim yillik buyume %100: 4.2 yil
+
+2) Ikinci yatirimci 3. ayda ayni 100M USD ile giriyor. Pay token/NAV fiyatindan verilirse:
+   Ucret getirisi her 1 USD sermayeye: once %15.6/yil, sonra %9.1/yil (ayni pasta daha cok sermaye arasinda bolunur)
+   Ilk ortak payi: %71 -> %42; ikinci ortak payi %42
+   Geri alma suresi (hacim sabit): ilk ortak 3 ay ayni, sonra 11.0 yil; ikinci ortak 11.0 yil
+   Hacim 2 kat olursa getiri 2 kat; sermaye girisi getiriyi ayni oranda dusurur. Bu yuzden sermaye getiri piyasa seviyesine inene kadar girer.

@@ -1,0 +1,7 @@
+Toplam havuz tokeni X=1.0 (A=0.5, B=0.5). Balina W satar. Fiyat dususu = gun-1 sonu.
+    W | Sinir yok | Sadece A siniri | Token2022 (%100 kayitli) | Token2022 (B kayitsiz)
+ 0.05 | %      9  | %           17  | %          9 ( 0.5 gun)    | %          17
+ 0.10 | %     17  | %           31  | %         17 ( 1.0 gun)    | %          31
+ 0.25 | %     36  | %           56  | %         17 ( 2.5 gun)    | %          56
+ 0.50 | %     56  | %           75  | %         17 ( 5.0 gun)    | %          75
+ 1.00 | %     75  | %           89  | %         17 (10.0 gun)    | %          89

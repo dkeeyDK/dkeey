@@ -1,0 +1,15 @@
+Adil cikis (orantili) icin sinir taramasi, derinlik %2, senaryo A (balina %5): en dusuk fiyat % | perakende satis fiyati % | perakende 20 gunde satabildigi %
+  sinir %   1/gun     82 |   104 |     0
+  sinir %   2/gun     81 |   103 |     1
+  sinir %   5/gun     81 |    97 |     2
+  sinir %  10/gun     70 |    81 |     6
+  sinir %  20/gun     55 |    61 |    21
+  sinir %  50/gun     22 |    31 |    79
+
+Ayni, senaryo D (talep cokusu + panik + balina)
+  sinir %   1/gun     48 |    81 |     0
+  sinir %   2/gun     46 |    66 |     1
+  sinir %   5/gun     46 |    63 |     3
+  sinir %  10/gun     44 |    56 |     7
+  sinir %  20/gun     42 |    45 |    28
+  sinir %  50/gun     22 |    30 |    79

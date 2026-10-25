@@ -1,0 +1,28 @@
+
+== A: balina %5 satar == (en dusuk fiyat % baslangica gore | 240 gun sonunda <%30 olan kosu %)
+derinlik/arz                  korumasiz                  sinir %2               sinir+kilit     sinir+kilit+geri alim
+  %0.5                  2% | coker %  0           9% | coker %  1           9% | coker %  1          10% | coker %  1
+  %1.0                  4% | coker %  0          17% | coker %  1          17% | coker %  1          18% | coker %  1
+  %2.0                  9% | coker %  0          33% | coker %  0          33% | coker %  0          35% | coker %  0
+  %5.0                 25% | coker %  0          60% | coker %  0          60% | coker %  0          62% | coker %  0
+
+== B: balina + iceridekiler kilitsiz %12 == (en dusuk fiyat % baslangica gore | 240 gun sonunda <%30 olan kosu %)
+derinlik/arz                  korumasiz                  sinir %2               sinir+kilit     sinir+kilit+geri alim
+  %0.5                  1% | coker %  0           9% | coker %  1           9% | coker %  1          10% | coker %  1
+  %1.0                  3% | coker %  0          17% | coker %  1          17% | coker %  1          18% | coker %  1
+  %2.0                  7% | coker %  0          33% | coker %  0          33% | coker %  0          35% | coker %  0
+  %5.0                 20% | coker %  0          59% | coker %  0          60% | coker %  0          62% | coker %  0
+
+== C: talep cokusu + panik == (en dusuk fiyat % baslangica gore | 240 gun sonunda <%30 olan kosu %)
+derinlik/arz                  korumasiz                  sinir %2               sinir+kilit     sinir+kilit+geri alim
+  %0.5                  9% | coker %  5           9% | coker %  5           9% | coker %  5          10% | coker %  5
+  %1.0                 17% | coker %  3          17% | coker %  3          17% | coker %  3          18% | coker %  3
+  %2.0                 32% | coker %  3          32% | coker %  3          32% | coker %  3          33% | coker %  3
+  %5.0                 46% | coker %  2          46% | coker %  2          46% | coker %  2          47% | coker %  2
+
+== D: B + C birlikte == (en dusuk fiyat % baslangica gore | 240 gun sonunda <%30 olan kosu %)
+derinlik/arz                  korumasiz                  sinir %2               sinir+kilit     sinir+kilit+geri alim
+  %0.5                  1% | coker %  6           9% | coker %  4           9% | coker %  4          10% | coker %  4
+  %1.0                  2% | coker %  3          17% | coker %  3          17% | coker %  3          18% | coker %  3
+  %2.0                  6% | coker %  2          31% | coker %  3          31% | coker %  3          33% | coker %  3
+  %5.0                 20% | coker %  2          41% | coker %  2          41% | coker %  2          42% | coker %  2

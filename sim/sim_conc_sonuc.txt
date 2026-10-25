@@ -1,0 +1,8 @@
+Ayni para (V=2): derinlik carpani ve balina satisinda fiyat dususu. s = tam-aralik havuzdaki token miktarinin kati.
+    aralik | derinlik x |   s=0.05 |    s=0.1 |   s=0.25 |    s=0.5 |      s=1
+       tam |        1.0 |   %    9 |   %   17 |   %   36 |   %   56 |   %   75
+       ±4x |        2.0 |   %    5 |   %    9 |   %   21 |   %   36 |   %   56
+       ±2x |        3.4 |   %    3 |   %    6 |   %   13 |   %   24 |   %   40
+     ±1.5x |        5.4 |   %    2 |   %    4 |   %    9 |   %   16 |   %   29
+    ±1.25x |        9.5 |   %    1 |   %    2 |   %    5 |   %   10 |   %   18
+     ±1.1x |       21.5 |   %    0 |   %    1 |   %    2 |   %    4 |   %    9

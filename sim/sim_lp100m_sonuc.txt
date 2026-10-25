@@ -1,0 +1,17 @@
+Balina satisi (USD) -> fiyat dususu. Mevcut havuz 40M USD TVL; ekstra LP 100M USD
+   satis |  LP yok | LP tam aralik | LP ±2x ajan | LP once cikarsa
+     2M | %   17  | %         5  | %       2  | %         17
+    10M | %   56  | %        23  | %      10  | %         56
+    25M | %   80  | %        46  | %      22  | %         80
+    50M | %   92  | %        66  | %      37  | %         92
+   100M | %   97  | %        83  | %      84  | %         97
+
+tam aralik: havuz payi %71, yillik ucret ~15.6M USD = %15.6 (aralikta kalirsa)
+
+±2x ajan: havuz payi %90, yillik ucret ~19.6M USD = %19.6 (aralikta kalirsa)
+
+Fiyat k kati olunca LP'nin sadece tutmaya gore kaybi (impermanent loss):
+  k=0.5: tam aralik % 5.7 | ±2x %19.5
+  k=0.8: tam aralik % 0.6 | ±2x % 2.1
+  k=1.25: tam aralik % 0.6 | ±2x % 2.1
+  k=2.0: tam aralik % 5.7 | ±2x %19.5

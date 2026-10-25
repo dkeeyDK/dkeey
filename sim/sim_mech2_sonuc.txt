@@ -1,0 +1,26 @@
+
+== calm, balina %75 == (kucuk yat. EK satis kaybi puan | balina EK dusus puan | kucuk yat. satis doluluk %)
+sinir yok                            63.8 |   48.0 | 100.0
+%3 sira: kucuk once (iyimser)        18.8 |   26.1 |  98.7
+%3 sira: BALINA once (saldiri)        2.0 |   22.6 |   0.0
+%3 orantili dagitim                  19.7 |   23.0 |   5.3
+%3 kucuk satis muaf, balina sinirli   30.1 |   38.1 | 100.0
+%3 balina kucuge BOLER (muaf)        63.8 |   48.0 | 100.0
+%1 sira: kucuk once (iyimser)         3.2 |    1.2 |  90.7
+%1 sira: BALINA once (saldiri)        2.0 |    0.7 |   0.0
+%1 orantili dagitim                   2.9 |    0.8 |   1.3
+%1 kucuk satis muaf, balina sinirli   12.2 |   19.1 | 100.0
+%1 balina kucuge BOLER (muaf)        63.8 |   48.0 | 100.0
+
+== decline, balina %75 == (kucuk yat. EK satis kaybi puan | balina EK dusus puan | kucuk yat. satis doluluk %)
+sinir yok                            55.4 |   39.3 | 100.0
+%3 sira: kucuk once (iyimser)        12.6 |   21.7 |  97.5
+%3 sira: BALINA once (saldiri)       -5.6 |   17.0 |   0.0
+%3 orantili dagitim                  13.5 |   17.7 |   6.0
+%3 kucuk satis muaf, balina sinirli   25.9 |   34.3 | 100.0
+%3 balina kucuge BOLER (muaf)        55.4 |   39.3 | 100.0
+%1 sira: kucuk once (iyimser)        -0.9 |    0.3 |  84.2
+%1 sira: BALINA once (saldiri)       -5.6 |   -0.2 |   0.0
+%1 orantili dagitim                  -1.3 |   -0.1 |   1.4
+%1 kucuk satis muaf, balina sinirli    9.4 |   17.0 | 100.0
+%1 balina kucuge BOLER (muaf)        55.4 |   39.3 | 100.0

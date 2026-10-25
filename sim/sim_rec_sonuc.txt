@@ -1,0 +1,40 @@
+
+== A: balina %5 satar ==  (en dusuk fiyat % | perakende satis fiyati % | perakende satis doluluk % | 240.gun fiyat %)
+ derinlik %1
+   sinir yok                                8 |    16 |   100 |   102
+   adil cikis (orantili, tum satislar)     81 |   103 |     0 |   103
+   muafiyet, bolme YOK                     19 |    85 |   100 |    99
+   muafiyet, balina %50 boler              11 |    16 |   100 |   102
+   muafiyet, balina %100 boler              8 |    16 |   100 |   102
+ derinlik %2
+   sinir yok                               16 |    30 |   100 |   104
+   adil cikis (orantili, tum satislar)     81 |   103 |     1 |   103
+   muafiyet, bolme YOK                     36 |    92 |   100 |   104
+   muafiyet, balina %50 boler              22 |    29 |   100 |   104
+   muafiyet, balina %100 boler             16 |    30 |   100 |   104
+ derinlik %5
+   sinir yok                               39 |    52 |   100 |   106
+   adil cikis (orantili, tum satislar)     82 |   103 |     2 |   104
+   muafiyet, bolme YOK                     77 |    97 |   100 |   106
+   muafiyet, balina %50 boler              47 |    52 |   100 |   106
+   muafiyet, balina %100 boler             39 |    52 |   100 |   106
+
+== D: talep cokusu + panik + balina ==  (en dusuk fiyat % | perakende satis fiyati % | perakende satis doluluk % | 240.gun fiyat %)
+ derinlik %1
+   sinir yok                                8 |    15 |   100 |    57
+   adil cikis (orantili, tum satislar)     46 |    67 |     0 |    56
+   muafiyet, bolme YOK                     19 |    25 |   100 |    56
+   muafiyet, balina %50 boler              11 |    14 |   100 |    57
+   muafiyet, balina %100 boler              8 |    15 |   100 |    57
+ derinlik %2
+   sinir yok                               16 |    28 |   100 |    57
+   adil cikis (orantili, tum satislar)     46 |    66 |     1 |    56
+   muafiyet, bolme YOK                     35 |    42 |   100 |    57
+   muafiyet, balina %50 boler              22 |    27 |   100 |    57
+   muafiyet, balina %100 boler             16 |    28 |   100 |    57
+ derinlik %5
+   sinir yok                               38 |    47 |   100 |    58
+   adil cikis (orantili, tum satislar)     47 |    66 |     3 |    57
+   muafiyet, bolme YOK                     46 |    53 |   100 |    59
+   muafiyet, balina %50 boler              46 |    48 |   100 |    58
+   muafiyet, balina %100 boler             38 |    47 |   100 |    58

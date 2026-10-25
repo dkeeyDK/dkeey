@@ -1,0 +1,51 @@
+Olcu: balinanin yarattigi EK fiyat dususu (puan), ayni rastgele gunlerde balinali - balinasiz. Median / ortalama. 400 kosu.
+
+A) Durgun piyasada ani satis (crash)
+  balina havuz tokeninin %25'i
+    korumasiz                ek dusus: median  14.0 | ortalama  15.1 puan
+    %5 sinir (tetik 2x)      ek dusus: median  14.0 | ortalama  15.1 puan
+    %5 sinir (tetik 1,15x)   ek dusus: median  14.0 | ortalama  15.1 puan
+    geri alim %1,5           ek dusus: median  13.5 | ortalama  14.7 puan
+    sinir+geri alim          ek dusus: median  13.4 | ortalama  14.7 puan
+  balina havuz tokeninin %75'i
+    korumasiz                ek dusus: median  43.8 | ortalama  41.9 puan
+    %5 sinir (tetik 2x)      ek dusus: median  43.8 | ortalama  41.9 puan
+    %5 sinir (tetik 1,15x)   ek dusus: median  43.8 | ortalama  41.9 puan
+    geri alim %1,5           ek dusus: median  43.3 | ortalama  41.4 puan
+    sinir+geri alim          ek dusus: median  43.3 | ortalama  41.4 puan
+B) Ani yukselisten hemen sonra satis (flash, gun 54)
+  balina havuz tokeninin %25'i
+    korumasiz                ek dusus: median   0.0 | ortalama   0.2 puan
+    %5 sinir (tetik 2x)      ek dusus: median   0.0 | ortalama   0.2 puan
+    %5 sinir (tetik 1,15x)   ek dusus: median   0.0 | ortalama   0.2 puan
+    geri alim %1,5           ek dusus: median   0.0 | ortalama   0.2 puan
+    sinir+geri alim          ek dusus: median   0.0 | ortalama   0.2 puan
+  balina havuz tokeninin %75'i
+    korumasiz                ek dusus: median   0.0 | ortalama   0.9 puan
+    %5 sinir (tetik 2x)      ek dusus: median   0.0 | ortalama   1.1 puan
+    %5 sinir (tetik 1,15x)   ek dusus: median   0.0 | ortalama   1.3 puan
+    geri alim %1,5           ek dusus: median   0.0 | ortalama   0.9 puan
+    sinir+geri alim          ek dusus: median   0.0 | ortalama   1.2 puan
+C) Yavas yukselis sonrasi satis (spike, gun 90)
+  balina havuz tokeninin %25'i
+    korumasiz                ek dusus: median   0.0 | ortalama   1.3 puan
+    %5 sinir (tetik 2x)      ek dusus: median   0.0 | ortalama   1.3 puan
+    %5 sinir (tetik 1,15x)   ek dusus: median   0.0 | ortalama   1.3 puan
+    geri alim %1,5           ek dusus: median   0.3 | ortalama   1.6 puan
+    sinir+geri alim          ek dusus: median   0.3 | ortalama   1.6 puan
+  balina havuz tokeninin %75'i
+    korumasiz                ek dusus: median   7.0 | ortalama  10.1 puan
+    %5 sinir (tetik 2x)      ek dusus: median   7.0 | ortalama  10.1 puan
+    %5 sinir (tetik 1,15x)   ek dusus: median   7.0 | ortalama  10.1 puan
+    geri alim %1,5           ek dusus: median   7.0 | ortalama  10.2 puan
+    sinir+geri alim          ek dusus: median   7.0 | ortalama  10.2 puan
+
+D) Gelir(enerji) etkisi: ani yukselis/gun 54, %25 balina, sinir+geri alim
+    gelir var: ek dusus median 0.0 ortalama 0.2
+    gelir yok: ek dusus median 0.0 ortalama 0.2
+
+E) Botlar (safsizlik): ani yukselis/gun 54, %25 balina
+    botlar yok korumasiz       : ek dusus median 0.0 ortalama 0.4
+    botlar yok sinir+geri alim : ek dusus median 0.0 ortalama 0.4
+    botlar var korumasiz       : ek dusus median 0.0 ortalama 0.2
+    botlar var sinir+geri alim : ek dusus median 0.0 ortalama 0.2

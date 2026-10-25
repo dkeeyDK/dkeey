@@ -1,0 +1,36 @@
+
+== Sakin piyasa, balina %25 == (EK zarar, puan: kucuk yat. satis kaybi | azami dusus)
+0 Hicbir sey (yalniz havuz 100k)       36.8 |   19.9   maliyet: -
+1a 2 kat derin havuz                   19.9 |    8.7   maliyet: +100k USD likidite
+1b 4 kat derin havuz                   11.2 |    3.8   maliyet: +300k USD likidite
+2a Fiyat-tetikli %5 sinir (2x)         36.8 |   19.9   maliyet: 0
+2b Hacim-tetikli %3/gun sinir          18.7 |   17.4   maliyet: 0, kisit: tum satislara
+2c Hacim-tetikli %1/gun sinir           3.2 |    1.2   maliyet: 0, kisit: tum satislara
+3a Geri alim, nakit 5k                 32.6 |   17.6   maliyet: 5k USD nakit
+3b Geri alim, nakit 30k                32.1 |   17.6   maliyet: 30k USD nakit
+4a Kilit: 10 gunde yayilan satis       25.3 |   19.8   maliyet: balina 10 gun kilitli
+4b Kilit: 30 gunde yayilan satis       10.4 |   12.4   maliyet: balina 30 gun kilitli
+
+== Sakin piyasa, balina %75 == (EK zarar, puan: kucuk yat. satis kaybi | azami dusus)
+0 Hicbir sey (yalniz havuz 100k)       63.6 |   48.0   maliyet: -
+1a 2 kat derin havuz                   43.0 |   29.4   maliyet: +100k USD likidite
+1b 4 kat derin havuz                   25.5 |   13.8   maliyet: +300k USD likidite
+2a Fiyat-tetikli %5 sinir (2x)         63.6 |   48.0   maliyet: 0
+2b Hacim-tetikli %3/gun sinir          18.7 |   26.4   maliyet: 0, kisit: tum satislara
+2c Hacim-tetikli %1/gun sinir           3.2 |    1.3   maliyet: 0, kisit: tum satislara
+3a Geri alim, nakit 5k                 60.3 |   47.0   maliyet: 5k USD nakit
+3b Geri alim, nakit 30k                59.7 |   47.0   maliyet: 30k USD nakit
+4a Kilit: 10 gunde yayilan satis       51.2 |   45.0   maliyet: balina 10 gun kilitli
+4b Kilit: 30 gunde yayilan satis       25.3 |   30.2   maliyet: balina 30 gun kilitli
+
+== Dususteki piyasa, balina %75 == (EK zarar, puan: kucuk yat. satis kaybi | azami dusus)
+0 Hicbir sey (yalniz havuz 100k)       55.5 |   39.4   maliyet: -
+1a 2 kat derin havuz                   36.6 |   20.5   maliyet: +100k USD likidite
+1b 4 kat derin havuz                   20.8 |    7.5   maliyet: +300k USD likidite
+2a Fiyat-tetikli %5 sinir (2x)         55.5 |   39.4   maliyet: 0
+2b Hacim-tetikli %3/gun sinir          12.8 |   22.1   maliyet: 0, kisit: tum satislara
+2c Hacim-tetikli %1/gun sinir          -0.8 |    0.5   maliyet: 0, kisit: tum satislara
+3a Geri alim, nakit 5k                 51.8 |   38.1   maliyet: 5k USD nakit
+3b Geri alim, nakit 30k                51.3 |   38.1   maliyet: 30k USD nakit
+4a Kilit: 10 gunde yayilan satis       43.2 |   38.6   maliyet: balina 10 gun kilitli
+4b Kilit: 30 gunde yayilan satis       19.5 |   25.5   maliyet: balina 30 gun kilitli

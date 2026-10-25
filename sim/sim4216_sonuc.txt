@@ -1,0 +1,18 @@
+senaryo taban | rezerv_ort rezerv_min<26hafta% iflas% tavana_ulasma% sigorta buyback staker (USD, 2 yil)
+felaket %15 | rez       8146  alt26h   0.0%  iflas   0.0%  tavan   0.0%  sig      158 buyback        641 staker        641
+felaket %25 | rez       8316  alt26h   0.0%  iflas   0.0%  tavan   0.0%  sig      140 buyback        568 staker        568
+felaket %40 | rez       8614  alt26h   0.0%  iflas   0.0%  tavan   0.0%  sig      113 buyback        458 staker        458
+kotu  %15 | rez      18400  alt26h   0.0%  iflas   0.0%  tavan   0.0%  sig     1278 buyback       5177 staker       5177
+kotu  %25 | rez      19905  alt26h   0.0%  iflas   0.0%  tavan   0.0%  sig     1127 buyback       4566 staker       4566
+kotu  %40 | rez      22191  alt26h   0.0%  iflas   0.0%  tavan   0.0%  sig      907 buyback       3673 staker       3673
+orta  %15 | rez      41600  alt26h   0.0%  iflas   0.0%  tavan 100.0%  sig    10400 buyback     207627 staker     207627
+orta  %25 | rez      41600  alt26h   0.0%  iflas   0.0%  tavan 100.0%  sig    10400 buyback     207150 staker     207150
+orta  %40 | rez      41600  alt26h   0.0%  iflas   0.0%  tavan 100.0%  sig    10400 buyback     208192 staker     208192
+iyi   %15 | rez      41600  alt26h   0.0%  iflas   0.0%  tavan 100.0%  sig    10400 buyback    1830704 staker    1830704
+iyi   %25 | rez      41600  alt26h   0.0%  iflas   0.0%  tavan 100.0%  sig    10400 buyback    1828651 staker    1828651
+iyi   %40 | rez      41600  alt26h   0.0%  iflas   0.0%  tavan 100.0%  sig    10400 buyback    1828279 staker    1828279
+
+Balina testi: havuz derinligi x (token), balina satisi W*x; fiyat orani = (x/(x+s))^2; arbitraj her epoch acigin %50 kapatir
+Satis=20% derinlik: tavansiz max dusus  30.6% (1 epoch) | %5 tavanli max dusus  16.3% (4 epoch)
+Satis=50% derinlik: tavansiz max dusus  55.6% (1 epoch) | %5 tavanli max dusus  17.0% (10 epoch)
+Satis=100% derinlik: tavansiz max dusus  75.0% (1 epoch) | %5 tavanli max dusus  17.0% (20 epoch)

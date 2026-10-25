@@ -1,0 +1,6 @@
+Balina W (havuz tokeninin kati) satar, 20 parca, hizli. 'net' = balinanin aldigi para / baslangic fiyatiyla deger
+    W |              ucret yok |     dinamik ucret (a=3, max %25)
+ 0.10 | dusus % 17 net % 91 | dusus % 17 net % 88
+ 0.25 | dusus % 36 net % 80 | dusus % 34 net % 71
+ 0.50 | dusus % 56 net % 67 | dusus % 52 net % 57
+ 1.00 | dusus % 75 net % 50 | dusus % 71 net % 43
