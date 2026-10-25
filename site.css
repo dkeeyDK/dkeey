@@ -1,0 +1,27 @@
+/* DKEEY shared styles */
+:root{--sky:#e9efff;--ink:#1b1f4b;--mute:#515a86;--white:#fff;--coral:#ff6b5e;--sun:#ffc93c;--mint:#27cfa0;--grape:#7b5cff;--blue:#2fa8ff;--pink:#ff74c1;--card:#fff;
+--font:ui-rounded,"SF Pro Rounded","Hiragino Maru Gothic ProN","Arial Rounded MT Bold","Nunito","Segoe UI",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root{--sky:#14173a;--ink:#f2f4ff;--mute:#a9b0dd;--white:#232859;--card:#1d2150}}
+.topnav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--sky) 88%,transparent);backdrop-filter:blur(8px);border-bottom:2px solid color-mix(in srgb,var(--ink) 10%,transparent)}
+.topnav .in{max-width:900px;margin:0 auto;padding:8px 16px;display:flex;align-items:center;gap:6px;overflow-x:auto;scrollbar-width:none}
+.topnav .in::-webkit-scrollbar{display:none}
+.topnav a{flex:none;color:var(--ink);text-decoration:none;font:700 15px/1 var(--font);padding:9px 13px;border-radius:999px;white-space:nowrap}
+.topnav a:hover{background:color-mix(in srgb,var(--ink) 9%,transparent)}
+.topnav a[aria-current=page]{background:var(--ink);color:var(--sky)}
+.topnav a.home{display:flex;align-items:center;gap:8px;font-weight:900;font-size:17px;padding-left:4px;margin-right:auto}
+.topnav a.home svg{width:28px;height:28px}
+.topnav a.ext::after{content:" ↗";opacity:.6}
+.page{max-width:720px;margin:0 auto;padding:30px 20px 60px;font:17px/1.6 var(--font);color:var(--ink)}
+.page h1{font-size:clamp(34px,8vw,48px);line-height:1.1;margin:8px 0 6px;font-weight:900;letter-spacing:-.01em}
+.page .lede{color:var(--mute);font-size:19px;margin:0 0 24px;text-wrap:balance}
+.page h2{font-size:23px;margin:30px 0 8px}
+.card{background:var(--card);border:3px solid var(--ink);border-radius:20px;padding:16px 18px;margin:12px 0;box-shadow:4px 4px 0 var(--ink)}
+.card h3{margin:0 0 4px;font-size:18px}.card p{margin:0}
+.tag{display:inline-block;font:800 12px/1 var(--font);letter-spacing:.04em;text-transform:uppercase;border-radius:999px;padding:5px 10px;margin-right:6px;color:#1b1f4b}
+.t-done{background:var(--mint)}.t-open{background:var(--sun)}.t-wait{background:var(--pink)}.t-design{background:var(--blue)}
+.page ul{padding-left:1.2em}.page li{margin:6px 0}
+.page a{color:var(--grape);font-weight:700}
+.warn{border-color:var(--coral);box-shadow:4px 4px 0 var(--coral)}
+.risk{color:var(--mute);font-size:14px;margin-top:36px;border-top:2px dashed color-mix(in srgb,var(--ink) 20%,transparent);padding-top:14px}
+footer.foot{max-width:720px;margin:0 auto;padding:0 20px 40px;color:var(--mute);font:14px/1.5 var(--font);text-align:center}
+footer.foot a{color:inherit}
