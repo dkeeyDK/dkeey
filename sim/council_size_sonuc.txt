@@ -1,0 +1,51 @@
+Meclis buyuklugu analizi (model). q=her uyenin tek basina dogru karar olasiligi
+
+q=0.7 korelasyon rho=0.05  (sinir deger = N->sonsuz)
+  N    dogru%   sinira_kalan   oy basina maliyet(x50)  ele gecirme maliyeti(x50)
+   25   91.82     4.66           0.5x                    0.5x
+   50   93.14     3.34           1.0x                    1.0x
+   75   94.84     1.65           1.5x                    1.5x
+  101   95.26     1.23           2.0x                    2.0x
+  151   95.66     0.82           3.0x                    3.0x
+  201   95.87     0.62           4.0x                    4.0x
+  301   96.07     0.41           6.0x                    6.0x
+  501   96.24     0.25          10.0x                   10.0x
+
+q=0.7 korelasyon rho=0.15  (sinir deger = N->sonsuz)
+  N    dogru%   sinira_kalan   oy basina maliyet(x50)  ele gecirme maliyeti(x50)
+   25   83.11     2.09           0.5x                    0.5x
+   50   83.06     2.15           1.0x                    1.0x
+   75   84.46     0.75           1.5x                    1.5x
+  101   84.65     0.56           2.0x                    2.0x
+  151   84.83     0.38           3.0x                    3.0x
+  201   84.92     0.28           4.0x                    4.0x
+  301   85.02     0.19           6.0x                    6.0x
+  501   85.09     0.11          10.0x                   10.0x
+
+q=0.7 korelasyon rho=0.3  (sinir deger = N->sonsuz)
+  N    dogru%   sinira_kalan   oy basina maliyet(x50)  ele gecirme maliyeti(x50)
+   25   76.60     0.69           0.5x                    0.5x
+   50   76.14     1.15           1.0x                    1.0x
+   75   77.06     0.22           1.5x                    1.5x
+  101   77.13     0.16           2.0x                    2.0x
+  151   77.19     0.10           3.0x                    3.0x
+  201   77.22     0.07           4.0x                    4.0x
+  301   77.25     0.04           6.0x                    6.0x
+  501   77.27     0.02          10.0x                   10.0x
+
+q=0.6 korelasyon rho=0.15  (sinir deger = N->sonsuz)
+  N    dogru%   sinira_kalan   oy basina maliyet(x50)  ele gecirme maliyeti(x50)
+   25   68.12     1.55           0.5x                    0.5x
+   50   67.31     2.36           1.0x                    1.0x
+   75   69.11     0.57           1.5x                    1.5x
+  101   69.25     0.42           2.0x                    2.0x
+  151   69.39     0.29           3.0x                    3.0x
+  201   69.46     0.22           4.0x                    4.0x
+  301   69.53     0.14           6.0x                    6.0x
+  501   69.59     0.08          10.0x                   10.0x
+
+Yetersayi (>%50 katilim gerekir): uye basina katilim olasiligi p
+  p=0.95: N=25:100.0%  N=50:100.0%  N=101:100.0%  N=201:100.0%  N=501:100.0%
+  p=0.9: N=25:100.0%  N=50:100.0%  N=101:100.0%  N=201:100.0%  N=501:100.0%
+  p=0.8: N=25:100.0%  N=50:100.0%  N=101:100.0%  N=201:100.0%  N=501:100.0%
+  p=0.7: N=25:98.3%  N=50:99.8%  N=101:100.0%  N=201:100.0%  N=501:100.0%

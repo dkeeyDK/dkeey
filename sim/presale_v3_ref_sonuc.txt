@@ -1,0 +1,14 @@
+balina: 10K DK istek; kucukler: 50 DK istek; hafta-1 odasi = cap/3
+kucuk=    0  balina= 10000 DK  toplam=   10000 DK  balina payi=100.0%  kucuk basina=0 DK
+kucuk=    1  balina= 10000 DK  toplam=   10050 DK  balina payi= 99.5%  kucuk basina=50 DK
+kucuk=   50  balina= 10000 DK  toplam=   12500 DK  balina payi= 80.0%  kucuk basina=50 DK
+kucuk=  200  balina= 10000 DK  toplam=   20000 DK  balina payi= 50.0%  kucuk basina=50 DK
+kucuk= 1000  balina= 10000 DK  toplam=   60000 DK  balina payi= 16.7%  kucuk basina=50 DK
+kucuk= 5000  balina= 10000 DK  toplam=  260000 DK  balina payi=  3.8%  kucuk basina=50 DK
+
+Talep > oda (hafta-1 odasi = 5.000 DK): balina 10K DK istiyor
+kucuk=   1  balina= 4950 DK  kucuk basina=  50 DK  toplam(3 hafta)=  5000 DK  balina payi= 99.0%
+kucuk=  10  balina= 4500 DK  kucuk basina=  50 DK  toplam(3 hafta)=  5000 DK  balina payi= 90.0%
+kucuk=  50  balina= 2500 DK  kucuk basina=  50 DK  toplam(3 hafta)=  5000 DK  balina payi= 50.0%
+kucuk= 100  balina=   49 DK  kucuk basina=  49 DK  toplam(3 hafta)=  4949 DK  balina payi=  1.0%
+kucuk= 500  balina=    9 DK  kucuk basina=   9 DK  toplam(3 hafta)=  4509 DK  balina payi=  0.2%
