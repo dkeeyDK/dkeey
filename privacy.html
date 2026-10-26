@@ -71,12 +71,13 @@ var reveal=false;
 function render(){tbody.innerHTML="";rows.forEach(function(r){var tr=document.createElement("tr");
  tr.innerHTML="<td>"+r.n+"</td><td><code>"+r.c+"…</code><code>"+r.d+"…</code></td><td>"+(reveal?r.l:"?")+"</td>";tbody.appendChild(tr)})}
 function log(label){n++;rows.unshift({n:n,c:hex(ct[0]).slice(0,14),d:hex(ct[1]).slice(0,14),l:label});if(rows.length>8)rows.pop();
- render();$("own").textContent="You open the lock and see: "+dec(ct)}
+ render();showOwn()}
+function showOwn(){$("own").textContent=reveal?"You open the lock and see: "+dec(ct):"Locked. Tick \u201Creveal\u201D to open it with your key."}
 function autoTick(){busy(function(){var x=Math.random();
  if(x<.3&&bal+250<=4095){ct=hadd(ct,enc(250));bal+=250;log("added 250 (real change)")}
  else if(x<.5&&bal>=100){ct=hadd(ct,enc(-100));bal-=100;log("spent 100 (real change)")}
  else{ct=rer(ct);log("refresh only (no change)")}})}
-$("rev").onchange=function(){reveal=this.checked;render()};
+$("rev").onchange=function(){reveal=this.checked;render();if(ct)showOwn()};
 function busy(f){var bs=document.querySelectorAll("#demo button");bs.forEach(function(b){b.disabled=true});setTimeout(function(){try{f()}finally{bs.forEach(function(b){b.disabled=false})}},20)}
 $("b1").onclick=function(){busy(function(){if(bal+250>4095){$("own").textContent="Demo limit is 4,095.";return}ct=hadd(ct,enc(250));bal+=250;log("added 250 (real change)")})};
 $("b2").onclick=function(){busy(function(){if(bal<100){$("own").textContent="Not enough balance.";return}ct=hadd(ct,enc(-100));bal-=100;log("spent 100 (real change)")})};
