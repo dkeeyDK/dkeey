@@ -14,10 +14,10 @@
 <li><strong>Honest limits.</strong> Addresses stay visible. Entering or leaving the pool shows an amount.</li>
 </ul></div>
 <h2>Try it: a balance whose look keeps changing</h2>
-<p>Below, a balance is locked with a key made in your browser. Anyone can re-shuffle the locked value without the key. The meaning stays the same, only the look changes.</p>
+<p>Below, a balance is locked with a key made in your browser. Anyone can re-shuffle the locked value without the key. The meaning stays the same, only the look changes. Turn on <em>auto refresh</em> and try to guess which rows are real payments, then tick <em>reveal</em> to check.</p>
 <div class="card demo" id="demo">
-<p class="small">Your lock (public part): <code id="pk">…</code></p>
-<div class="row"><button id="b1">Add 250</button><button id="b2">Spend 100</button><button id="b3">Refresh the look</button><label class="auto"><input type="checkbox" id="auto"> auto refresh</label></div>
+<p class="small">Your lock (the part anyone can see): <code id="pk">…</code></p>
+<div class="row"><button id="b1">Add 250</button><button id="b2">Spend 100</button><button id="b3">Refresh the look</button><label class="auto"><input type="checkbox" id="auto"> auto refresh</label><label class="auto"><input type="checkbox" id="rev"> reveal what only I know</label></div>
 <p id="own" aria-live="polite">Preparing…</p>
 <table class="tt" id="tb"><thead><tr><th>#</th><th>What everyone sees</th><th>What only you know</th></tr></thead><tbody></tbody></table>
 </div>
@@ -67,15 +67,21 @@ function dec(c){tbl();var M=add(c[0],neg(mul(s,c[1]))),NG=neg(G),cur=M;for(var i
 var ct,bal=1500,n=0,rows=[];
 var $=function(i){return document.getElementById(i)};
 var tbody=$("tb").querySelector("tbody");
+var reveal=false;
+function render(){tbody.innerHTML="";rows.forEach(function(r){var tr=document.createElement("tr");
+ tr.innerHTML="<td>"+r.n+"</td><td><code>"+r.c+"…</code><code>"+r.d+"…</code></td><td>"+(reveal?r.l:"?")+"</td>";tbody.appendChild(tr)})}
 function log(label){n++;rows.unshift({n:n,c:hex(ct[0]).slice(0,14),d:hex(ct[1]).slice(0,14),l:label});if(rows.length>8)rows.pop();
- tbody.innerHTML="";rows.forEach(function(r){var tr=document.createElement("tr");
- tr.innerHTML="<td>"+r.n+"</td><td><code>"+r.c+"…</code><code>"+r.d+"…</code></td><td>"+r.l+"</td>";tbody.appendChild(tr)});
- $("own").textContent="You open the lock and see: "+dec(ct)}
+ render();$("own").textContent="You open the lock and see: "+dec(ct)}
+function autoTick(){busy(function(){var x=Math.random();
+ if(x<.3&&bal+250<=4095){ct=hadd(ct,enc(250));bal+=250;log("added 250 (real change)")}
+ else if(x<.5&&bal>=100){ct=hadd(ct,enc(-100));bal-=100;log("spent 100 (real change)")}
+ else{ct=rer(ct);log("refresh only (no change)")}})}
+$("rev").onchange=function(){reveal=this.checked;render()};
 function busy(f){var bs=document.querySelectorAll("#demo button");bs.forEach(function(b){b.disabled=true});setTimeout(function(){try{f()}finally{bs.forEach(function(b){b.disabled=false})}},20)}
 $("b1").onclick=function(){busy(function(){if(bal+250>4095){$("own").textContent="Demo limit is 4,095.";return}ct=hadd(ct,enc(250));bal+=250;log("added 250 (real change)")})};
 $("b2").onclick=function(){busy(function(){if(bal<100){$("own").textContent="Not enough balance.";return}ct=hadd(ct,enc(-100));bal-=100;log("spent 100 (real change)")})};
 $("b3").onclick=function(){busy(function(){ct=rer(ct);log("refresh only (no change)")})};
-var t=null;$("auto").onchange=function(){if(this.checked){t=setInterval(function(){if(!document.hidden)$("b3").click()},3000)}else{clearInterval(t)}};
+var t=null;$("auto").onchange=function(){if(this.checked){t=setInterval(function(){if(!document.hidden)autoTick()},3000)}else{clearInterval(t)}};
 setTimeout(function(){$("pk").textContent=hex(P).slice(0,16)+"…";ct=enc(1500);log("start: 1,500")},30);
 })();
 </script></main><footer class="foot">© DKEEY · <a href="/security.html">Security</a> · <a href="https://github.com/dkeeyDK/dkeey" rel="noopener noreferrer">GitHub</a> · <a href="https://bsky.app/profile/dkeey.bsky.social" rel="noopener noreferrer">Bluesky</a> · <a href="https://x.com/dkeeyDK" rel="noopener noreferrer">X</a> · <a href="/channels.html">Channels</a></footer></body></html>
