@@ -25,3 +25,4 @@
 .risk{color:var(--mute);font-size:14px;margin-top:36px;border-top:2px dashed color-mix(in srgb,var(--ink) 20%,transparent);padding-top:14px}
 footer.foot{max-width:720px;margin:0 auto;padding:0 20px 40px;color:var(--mute);font:14px/1.5 var(--font);text-align:center}
 footer.foot a{color:inherit}
+code{word-break:break-all;font-size:.85em}
