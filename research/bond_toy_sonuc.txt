@@ -1,0 +1,15 @@
+group: 256-bit safe prime (toy size)
+PASS re-randomized commitment differs from the original
+PASS re-randomized commitment opens to the SAME value with r+dr
+PASS homomorphic: commit(70)+commit(50) opens as 120 (no inflation)
+PASS a wrong value does not open the commitment
+PASS 1000 re-randomizations are all distinct
+PASS any 6 shares reconstruct the key
+PASS 5 shares reconstruct the WRONG value
+PASS 5 shares are consistent with an arbitrary fake secret (no information)
+PASS 6 partial results combine to the real tag
+PASS 5 partial results do NOT give the real tag
+PASS no single seat's partial equals the tag
+PASS spending the same unit twice is caught
+PASS a different unit has a different nullifier
+ALL PASS

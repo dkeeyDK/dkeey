@@ -1,0 +1,24 @@
+POOL MALIYET / KAPASITE SIMULASYONU (gizli havuz: her harcama/cekim = 1 Groth16 dogrulamasi)
+ Varsayim: dogrulama 200K / 350K / 500K CU (kaynak: Chainstack 170-500K); 1 islem = 1 kanit (islem boyutu limiti 1232 bayt); cover islemi de kanit ister.
+ Havuzdaki kullanici basina 0.3 islem/gun (islem = harcama => 1 kanit); her 10 islemde 1 cekim (1 ek kanit). Tepe yuk = ortalama x 50.
+ kullanici havuz% havuz kul. gercek/taraf/tur ortu cifti/tur  kanit/gun tx/sn ort tx/sn tepe  zincir kap. %(350K) ucret SOL/gun  seviye
+    10,000     1%        100             0.01           30.0     86,403       1.0       50.0             0.2800%          0.43  YUKSEK
+    10,000    10%      1,000             0.10           29.9     86,430       1.0       50.0             0.2801%          0.43  YUKSEK
+    10,000    30%      3,000             0.31           29.7     86,490       1.0       50.1             0.2803%          0.43  YUKSEK
+   100,000     1%      1,000             0.10           29.9     86,430       1.0       50.0             0.2801%          0.43  YUKSEK
+   100,000    10%     10,000             1.04           29.0     86,700       1.0       50.2             0.2810%          0.43  YUKSEK
+   100,000    30%     30,000             3.12           26.9     87,300       1.0       50.5             0.2829%          0.44  YUKSEK
+ 1,000,000     1%     10,000             1.04           29.0     86,700       1.0       50.2             0.2810%          0.43  YUKSEK
+ 1,000,000    10%    100,000            10.42           19.6     89,400       1.0       51.7             0.2897%          0.45  YUKSEK
+ 1,000,000    30%    300,000            31.25            0.0     99,000       1.1       57.3             0.3208%          0.50  YUKSEK
+
+ Dogrulama CU duyarliligi (N=100,000, havuz %10): 
+    200K CU/kanit -> gunluk toplam   17.3 milyar CU = zincir kapasitesinin 0.1606%'u
+    350K CU/kanit -> gunluk toplam   30.3 milyar CU = zincir kapasitesinin 0.2810%'u
+    500K CU/kanit -> gunluk toplam   43.4 milyar CU = zincir kapasitesinin 0.4014%'u
+
+ Gecikme: kanit olusturma (kullanici cihazinda) + 1 islem onayi. Kullaniciyi bekletmez ama telefonda saniyeler surebilir (olculmedi).
+ Merkle agaci: derinlik 20 = 1,048,576 not; 1M kullanici x birden cok not icin derinlik 24-26 gerekir. Her ekleme derinlik kadar Poseidon hash'i = ek CU (OLCULMEDI).
+ Tek islemde birden fazla kanit: kanit 256-388 bayt, islem 1232 bayt -> islem basina 1-2 kanit; tum tur icin tek birlesik kanit (rollup tarzi) ayri arastirma.
+
+NOT: tum degerler tahmin; bloktaki CU limiti, ucret ve Poseidon maliyeti gercek olcumle degisir. Kanit uretim suresi ve gizli kurulum (trusted setup) maliyeti modellenmedi.

@@ -1,0 +1,45 @@
+PART 1) GIZLILIK SEVIYESI EGRISI - anlik islem (tur 60 sn, kimse beklemiyor). Olcu: bir islemin karsi tarafini bilmek icin saldirganin aday sayisi s (taraf basina).
+ Ortu butcesi = gunluk hazine limitinin %25'i = 5,107 birim/gun. Ortu islemi cifti = alici+satici; maliyet = 2 x boyut x %0.5.
+ DUNYA H: tutarlar gizli (ortu 5 birim olabilir). DUNYA V: tutarlar gorunur (ortu gercek dagilimi taklit etmeli, ort. 120 birim; ayrica saldirgan tutarla aday eler).
+ kullanici gercek/taraf | H: ortu cifti/tur  s   seviye  P(eslestirme) | V: ortu/tur  s_ham  s_tutarli  seviye  P(eslestirme)
+       100         0.01 |           30.0  30.0   YUKSEK       3.3% |       3.0     3.0        1.0    DUSUK      98.0%
+     1,000         0.10 |           29.9  30.0   YUKSEK       3.3% |       3.0     3.1        1.0    DUSUK      99.3%
+     5,000         0.52 |           29.5  30.0   YUKSEK       3.3% |       3.0     3.5        1.0    DUSUK      98.8%
+    10,000         1.04 |           29.0  30.0   YUKSEK       3.3% |       3.0     4.0        1.0    DUSUK      97.8%
+    50,000         5.21 |           24.8  30.0   YUKSEK       3.3% |       3.0     8.2        1.0    DUSUK      95.5%
+   100,000        10.42 |           19.6  30.0   YUKSEK       3.3% |       3.0    13.4        1.1    DUSUK      93.2%
+ 1,000,000       104.17 |            0.0 104.2   YUKSEK       1.0% |       0.0   104.2        1.8    DUSUK      56.5%
+ Okuma: H dunyasinda ortu ucuz oldugu icin kucuk kullanici sayisinda da seviye hizla yukselir. V dunyasinda tutar gorunur oldugundan aday kumesi tutar filtresiyle yaklasik 1-2'ye iner: kalabalik ne olursa olsun bulaniklik YOK denecek kadar az.
+ (Not: V'de tutar parcalayarak/yuvarlayarak bunu azaltma fikri ayri bir arastirma; burada modellenmedi.)
+
+PART 2) DEVNET SONUCU SENARYOLARI: gizli tutar/transfer hook DEX'te kabul edilirse (H) ya da edilmezse (V). Dis DEX hacim payi x'e gore korunan hacim.
+ Korunan hacim = ic merdiven hacmi (H ya da V seviyesiyle) ; dis DEX hacmi gorunur (bulanik degil).
+   dis DEX hacim payi   0%: H dunyasi: ic hacim %100 bulanik, dis %0 acik | V dunyasi: bulaniklik pratikte yok (tutar eslesmesi)
+   dis DEX hacim payi  30%: H dunyasi: ic hacim %70 bulanik, dis %30 acik | V dunyasi: bulaniklik pratikte yok (tutar eslesmesi)
+   dis DEX hacim payi  70%: H dunyasi: ic hacim %30 bulanik, dis %70 acik | V dunyasi: bulaniklik pratikte yok (tutar eslesmesi)
+ Hook DEX islemini engellerse (dis listeleme olmaz): likidite yalniz ic merdivende; hacim payi dis=0. Bunu hacim/likidite olarak modelleyemedim (gercek veri yok).
+
+PART 3) CEKIRDEK ELE GECIRILIRSE: eslesmeyi gormek icin esik t=6/8 koltuk gerekir (5 LLM + 3 kural koltugu). Saldirgan eslesmeyi gorme olasiligi:
+  p (koltuk basi) | q=ortak LLM kor nokta: 0%    1%     5%   (1/8 koltuk tek basina, her koltuk bagimsiz)
+               2% |   0.000%    0.059%    0.294%
+               5% |   0.000%    0.143%    0.713%
+              10% |   0.002%    0.273%    1.357%
+              20% |   0.123%    0.610%    2.557%
+              30% |   1.129%    1.775%    4.358%
+ Okuma: LLM'lerin ortak kor noktasi (q) bagimsiz p'den cok daha buyuk risk; kural koltuklari bunu 3 koltuk ile sinirlar. Eslesmeyi gorme = kullanici gizliligi kaybi (para kaybi degil).
+
+PART 4) SALDIRGAN ORTU ISLEMLERINI AYIKLAYABILIRSE (dogruluk a): etkin aday kumesi = gercek + (1-a) x ortu
+      a | H dunyasi, 10,000 kullanici: s, P  | 100,000 kullanici: s, P
+     0% |                  30.0   3.3% |                30.0   3.3%
+    50% |                  15.5   6.4% |                20.2   4.9%
+    90% |                   3.9  25.4% |                12.4   8.1%
+    99% |                   1.3  75.1% |                10.6   9.4%
+ Okuma: ortu islemleri saldirgan tarafindan ayirt edilirse (zamanlama, ucret, cuzdan kumesi) seviye ham gercek kalabalik kadar kalir.
+
+PART 5) TEKRAR EDEN ISLEMLER: bir kullanici T islem yapar; en az birinin eslesmesinin bulunma olasiligi 1-(1-p)^T (bagimsiz tur varsayimi)
+    YUKSEK (p=5%): T=1  5.0% | T=10 40.1% | T=100 99.4%
+     ORTA (p=20%): T=1 20.0% | T=10 89.3% | T=100 100.0%
+    DUSUK (p=50%): T=1 50.0% | T=10 99.9% | T=100 100.0%
+ Okuma: tek islem 'YUKSEK' bulanik olsa bile cok islem yapan kullanicinin en az bir islemi sizar. Bu yuzden vaat: 'bir islemi bulanik', 'hesabin tum gecmisi gizli' DEGIL.
+
+MODELLENMEDI: gercek DEX/hook davranisi, zamanlama ve ucret parmak izi, cuzdan kumeleme, gizli tutar kanitlarinin maliyeti (hesaplama/ucret), hukuki kabul.

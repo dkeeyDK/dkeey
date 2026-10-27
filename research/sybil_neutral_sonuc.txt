@@ -1,0 +1,20 @@
+SYBIL-NOTR ONSATIS TASARIMI: 200,000 durust alici, arz 6.0M DK, durust talep toplami 36.7M DK (taban fiyatta)
+ Karsilastirilan kurallar: (A) cuzdan basina tavan + suyla doldurma [mevcut], (B) sabit fiyat, paraya orantili pay, (C) fiyat-temizleyen satis: fiyat, talep=arz olana kadar yukselir (talep ~ (p0/p)^1.5), herkes ayni fiyattan alir.
+
+ saldirgan para payi    cuzdan | A: saldirgan payi medyan durust | B: saldirgan payi  medyan | C: saldirgan payi  medyan fiyat x
+                 0%         1 |              0.0%          37.8 |              0.0%     9.8 |              0.0%     9.8    3.35
+                 1%         1 |              0.0%          37.8 |              1.0%     9.7 |              1.0%     9.7    3.37
+                 1%     1,000 |              0.6%          37.5 |              1.0%     9.7 |              1.0%     9.7    3.37
+                 1%   100,000 |              6.2%          34.9 |              1.0%     9.7 |              1.0%     9.7    3.37
+                 5%         1 |              0.0%          37.8 |              5.0%     9.3 |              5.0%     9.3    3.46
+                 5%     1,000 |              0.6%          37.5 |              5.0%     9.3 |              5.0%     9.3    3.46
+                 5%   100,000 |             32.2%          23.5 |              5.0%     9.3 |              5.0%     9.3    3.46
+                20%         1 |              0.0%          37.8 |             20.0%     7.8 |             20.0%     7.8    3.88
+                20%     1,000 |              0.6%          37.5 |             20.0%     7.8 |             20.0%     7.8    3.88
+                20%   100,000 |             36.3%          21.8 |             20.0%     7.8 |             20.0%     7.8    3.88
+
+ Okuma:
+ - A: saldirganin payi cuzdan sayisiyla buyur (parcalama isler); durust medyan alici dusur. Tavan sadece parcalamayan DURUST zenginleri cezalandirir.
+ - B ve C: saldirganin payi cuzdan sayisindan BAGIMSIZ (sadece para payi). Parcalamak kazandirmaz.
+ - C, B ile ayni dagilimi verir (sabit arz, paraya orantili); fark fiyatta: herkes temizleme fiyatini oder (fiyat x), hazine ~o kadar fazla toplar. Kucuk alicinin payi iki kuralda da ~%16 (A sybil yokken %62 - A durust kullanici icin daha cömert ama parcalamada coker).
+ - Taviz (C): ilk fiyat belirsiz, 'ne kadar odeyecegim' onceden bilinmez; talep esnekligi (1.5) VARSAYIM; gercek talep olculmedi.

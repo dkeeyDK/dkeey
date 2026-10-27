@@ -1,0 +1,23 @@
+HAZINE SELALESI (waterfall) SIMULASYONU: once 'guvenlik tanki' dolar, tasan para ihtiyac havuzuna akar. 24 ay, aylik adim.
+TUM GIRDILER VARSAYIM (teklif/gercek hacim yok). Tank hedefi = 24 ay isletme gideri + denetim/hukuk rezervi A.
+Denetim/hukuk rezervi A = 50,000 USD varsayim (sektorde gorulen buyukluk; teklif ALINMADI).
+
+ senaryo tank hedefi | tank dolum ay | 24 ay toplam gelir 24 ay gider tasan (ihtiyac havuzu) | gelir kalemi payi: ön satis / NFT / parite
+   DUSUK      52,328 |          ay 8 |             73,008       2,328                 19,156 |   20% /   79% /    1%
+   TEMEL      52,328 |          ay 2 |            185,575       2,328                130,919 |   15% /   78% /    6%
+  YUKSEK      59,072 |          ay 0 |            697,875       9,072                629,731 |   20% /   62% /   17%
+
+Parite hacmi hassasiyeti (TEMEL, diger kalemler sabit): aylik hacim -> tank dolum ayi
+   hacim    50,000/ay -> ay 2
+   hacim   200,000/ay -> ay 2
+   hacim 1,000,000/ay -> ay 2
+   hacim 5,000,000/ay -> ay 2
+
+NFT geliri 12. aydan sonra biter; sonrasi icin yalniz parite komisyonu kalir. Haftalik cekim limiti (%0.5) tank->ihtiyac havuzu akisini da yavaslatir (v4 hazine kurali) - akis kurali ayri tasarlanmali.
+
+NFT satis orani hassasiyeti (TEMEL): NFT'lerin yuzde kaci satilirsa tank kac ayda dolar?
+   NFT satisi %  0 -> ay 59
+   NFT satisi % 10 -> ay 23
+   NFT satisi % 25 -> ay 7
+   NFT satisi % 50 -> ay 4
+   NFT satisi %100 -> ay 2

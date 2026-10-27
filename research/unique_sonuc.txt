@@ -1,0 +1,49 @@
+A) PAYLASIM AGIRLIGI: odul / cikis limiti havuzu nasil bolunur? (100,000 durust cuzdan, yas 0-180 gun, sapma lognormal)
+ Saldirgan parasi = durust toplamin 1%'i
+        1 cuzdan, yas  0 gun -> havuz payi: esit(cuzdan basina)   0.0% | varlik   1.0% | varlik x yas   0.1%
+        1 cuzdan, yas 30 gun -> havuz payi: esit(cuzdan basina)   0.0% | varlik   1.0% | varlik x yas   0.4%
+        1 cuzdan, yas 90 gun -> havuz payi: esit(cuzdan basina)   0.0% | varlik   1.0% | varlik x yas   1.3%
+      100 cuzdan, yas  0 gun -> havuz payi: esit(cuzdan basina)   0.1% | varlik   1.0% | varlik x yas   0.1%
+      100 cuzdan, yas 30 gun -> havuz payi: esit(cuzdan basina)   0.1% | varlik   1.0% | varlik x yas   0.4%
+      100 cuzdan, yas 90 gun -> havuz payi: esit(cuzdan basina)   0.1% | varlik   1.0% | varlik x yas   1.3%
+    10000 cuzdan, yas  0 gun -> havuz payi: esit(cuzdan basina)   9.1% | varlik   1.0% | varlik x yas   0.1%
+    10000 cuzdan, yas 30 gun -> havuz payi: esit(cuzdan basina)   9.1% | varlik   1.0% | varlik x yas   0.4%
+    10000 cuzdan, yas 90 gun -> havuz payi: esit(cuzdan basina)   9.1% | varlik   1.0% | varlik x yas   1.3%
+ Saldirgan parasi = durust toplamin 5%'i
+        1 cuzdan, yas  0 gun -> havuz payi: esit(cuzdan basina)   0.0% | varlik   4.8% | varlik x yas   0.3%
+        1 cuzdan, yas 30 gun -> havuz payi: esit(cuzdan basina)   0.0% | varlik   4.8% | varlik x yas   2.2%
+        1 cuzdan, yas 90 gun -> havuz payi: esit(cuzdan basina)   0.0% | varlik   4.8% | varlik x yas   6.2%
+      100 cuzdan, yas  0 gun -> havuz payi: esit(cuzdan basina)   0.1% | varlik   4.8% | varlik x yas   0.3%
+      100 cuzdan, yas 30 gun -> havuz payi: esit(cuzdan basina)   0.1% | varlik   4.8% | varlik x yas   2.2%
+      100 cuzdan, yas 90 gun -> havuz payi: esit(cuzdan basina)   0.1% | varlik   4.8% | varlik x yas   6.2%
+    10000 cuzdan, yas  0 gun -> havuz payi: esit(cuzdan basina)   9.1% | varlik   4.8% | varlik x yas   0.3%
+    10000 cuzdan, yas 30 gun -> havuz payi: esit(cuzdan basina)   9.1% | varlik   4.8% | varlik x yas   2.2%
+    10000 cuzdan, yas 90 gun -> havuz payi: esit(cuzdan basina)   9.1% | varlik   4.8% | varlik x yas   6.2%
+ Durust ust %1'in havuz payi: esit 1.0% | varlik 19.8% | varlik x yas 21.6%
+ Medyan kullanicinin payi (esit=1.00 alinirsa): varlik 0.33 | varlik x yas 0.29
+ Okuma: parcalamak (1 -> 10,000 cuzdan) varlik veya varlik x yas semasinda HIC avantaj vermez; esit semada payi ~90x yapar. Yas, 'yeni parayla hemen saldirmayi' yasla/sermaye bekletmeyle pahalilastirir.
+
+A2) CIKIS ENGELLEME: limit agirliga gore paylasilir; saldirgan kendi payini satip geri alarak o payi bosa harcar (cap 2.0M DK/gun, spread %0.5)
+   saldirgan para payi   1%, yas  0: baskalarindan alinan limit payi  0.1%  maliyet/gun ~7 birim
+   saldirgan para payi   1%, yas 90: baskalarindan alinan limit payi  1.3%  maliyet/gun ~132 birim
+   saldirgan para payi   5%, yas  0: baskalarindan alinan limit payi  0.3%  maliyet/gun ~33 birim
+   saldirgan para payi   5%, yas 90: baskalarindan alinan limit payi  6.2%  maliyet/gun ~625 birim
+   saldirgan para payi  20%, yas  0: baskalarindan alinan limit payi  1.3%  maliyet/gun ~132 birim
+   saldirgan para payi  20%, yas 90: baskalarindan alinan limit payi 21.1%  maliyet/gun ~2,105 birim
+ Karsilastirma: tek global ilk-gelen limit: baskalarindan alinan pay %100, maliyet ~22,080 birim/gun (milyon-sim S4).
+
+B) BULANIKLIK KUCUK KULLANICI SAYISINDA (tur basina en az 20 islem; 0.3 islem/kullanici/gun)
+ Hazine haftalik limiti ~143,000 birim -> gunluk ~20,429 birim (milyon-sim varsayimi). Ortu islemi maliyeti = 120 birim x %0.5 = 0.6 birim/islem
+  kullanici                tur 1dk                tur 5dk               tur 15dk | 20 emir icin medyan bekleme
+      1,000      28,505 ortu   84%       5,460 ortu   16%       1,621 ortu    5% |    96.0 dk
+     10,000      25,802 ortu   76%       2,761 ortu    8%           3 ortu    0% |     9.6 dk
+    100,000       2,044 ortu    6%           0 ortu    0%           0 ortu    0% |     1.0 dk
+  1,000,000           0 ortu    0%           0 ortu    0%           0 ortu    0% |     0.1 dk
+ (ortu islemi sayisi/gun ve maliyetin gunluk hazine limitine orani). Anlik karar + ortu islemi, kucuk ekosistemde hazine limitinin cogunu yer; %100 uzeri = limit yetmez.
+
+C) SAHTE DK: yeni alicilarin sahtesine kanma beklentisi (SADECE VARSAYIM; gercek davranis olculmedi)
+   dogrulama orani   5%: gunde 1000 yeni alicidan ~  285 kisi sahteyle karsilasip dogrulamiyor (~28,500 birim zarar)
+   dogrulama orani  20%: gunde 1000 yeni alicidan ~  240 kisi sahteyle karsilasip dogrulamiyor (~24,000 birim zarar)
+   dogrulama orani  50%: gunde 1000 yeni alicidan ~  150 kisi sahteyle karsilasip dogrulamiyor (~15,000 birim zarar)
+   dogrulama orani  80%: gunde 1000 yeni alicidan ~   60 kisi sahteyle karsilasip dogrulamiyor (~6,000 birim zarar)
+ Hash tek basina dogrulama orani artirmaz; resmi mint adresinin tek kaynaktan (site, cuzdan/listeleme dogrulamasi) gorunmesi gerekir.

@@ -1,0 +1,53 @@
+N = 1,000,000 users | ladder supply 100,000,000 DK in 127 bins | step 2% | max price = 12.1x start
+
+S1) PRESALE: 30M DK, fair water-filling, 10K DK cap per WALLET (contract). Honest wallets request lognormal (median 60 DK).
+   whales=    0 x wallets=    0: level     37.0 DK/wallet | honest total 30.00M | sybil share   0.0% | honest top-1% share  1.2%
+   whales=  200 x wallets= 1000: level     28.5 DK/wallet | honest total 24.30M | sybil share  19.0% | honest top-1% share  1.2%
+   whales= 1000 x wallets= 1000: level     15.6 DK/wallet | honest total 14.42M | sybil share  51.9% | honest top-1% share  1.1%
+   whales= 1000 x wallets= 5000: level      5.0 DK/wallet | honest total  4.94M | sybil share  83.5% | honest top-1% share  1.0%
+   Reading: the 10K cap is per wallet, so many wallets bypass it; the sybil share rises with the number of wallets, not with money alone.
+
+S2) CALM MARKET, 120 days (daily sell cap 2,000,000 DK = 2% of ladder supply at N=1M, ONE cap for everyone):
+   DK sold on the ladder at end:   74.1M of 100M | price now 6.43x | holders 917,130
+   daily cap used on average 33.0%; busiest day 91.6%
+   Price path (day: price): 0: 1.43, 20: 9.01, 40: 9.01, 60: 12.12, 80: 9.56, 100: 7.84
+   holders whose average buy price is below today's price (paper profit): 46.8%; median holding 20 DK; top 1% hold 23.6% of DK
+
+S3) BANK RUN on day 40: a share of all holders tries to sell EVERYTHING; others stop buying.
+    10% run, fifo   : day-1 want    9.9M DK, cap lets  2.0M out | still holding after 1/7/30/59 days: 60.3%  0.0%  0.0%  0.0% | price now 6.18x
+    10% run, prorata: day-1 want    9.8M DK, cap lets  2.0M out | still holding after 1/7/30/59 days: 60.1%  0.0%  0.0%  0.0% | price now 5.28x
+    30% run, fifo   : day-1 want   27.8M DK, cap lets  2.0M out | still holding after 1/7/30/59 days: 85.7% 43.1%  0.0%  0.0% | price now 2.97x
+    30% run, prorata: day-1 want   28.2M DK, cap lets  2.0M out | still holding after 1/7/30/59 days: 85.8% 43.3%  0.0%  0.0% | price now 3.41x
+    60% run, fifo   : day-1 want   54.7M DK, cap lets  2.0M out | still holding after 1/7/30/59 days: 92.7% 70.6%  0.0%  0.0% | price now 2.04x
+    60% run, prorata: day-1 want   55.4M DK, cap lets  2.0M out | still holding after 1/7/30/59 days: 92.8% 71.1%  0.0%  0.0% | price now 1.96x
+
+S4) EXIT DENIAL: one attacker sells the whole daily cap first every day, then buys it back (round trip).
+   cost per day of blocking everyone else (FIFO global cap) = spread on the cap's value = 0.5% x 4.42M units = 22,080 units/day
+   30% run, still holding after 7 / 30 days:  no attacker 43.1%  0.0% | attacker + FIFO cap 100.0% 100.0% | attacker + pro-rata cap (attacker holds 50% of supply) 71.6%  0.0%
+   Reading: with one global first-come cap, a very cheap attacker can freeze the exit. A cap shared in proportion to holdings forces the attacker to hold a large share of the supply.
+
+S5) THEFT: each day a share of wallets is compromised; thief tries to drain the wallet through the ladder (cap per wallet per round r, flag chance per round p).
+   0.01% wallets/day (  100 wallets): exit cap 100%/round, flag 30%/round -> 100.0% of each stolen balance leaves = about 12,000 units/day (assumed 120 units per wallet)
+   0.01% wallets/day (  100 wallets): exit cap  20%/round, flag 30%/round -> 45.4% of each stolen balance leaves = about 5,448 units/day (assumed 120 units per wallet)
+   0.01% wallets/day (  100 wallets): exit cap   5%/round, flag 30%/round -> 14.8% of each stolen balance leaves = about 1,776 units/day (assumed 120 units per wallet)
+   0.01% wallets/day (  100 wallets): exit cap   5%/round, flag 60%/round ->  7.9% of each stolen balance leaves = about 954 units/day (assumed 120 units per wallet)
+   0.10% wallets/day (1,000 wallets): exit cap 100%/round, flag 30%/round -> 100.0% of each stolen balance leaves = about 120,000 units/day (assumed 120 units per wallet)
+   0.10% wallets/day (1,000 wallets): exit cap  20%/round, flag 30%/round -> 45.4% of each stolen balance leaves = about 54,476 units/day (assumed 120 units per wallet)
+   0.10% wallets/day (1,000 wallets): exit cap   5%/round, flag 30%/round -> 14.8% of each stolen balance leaves = about 17,761 units/day (assumed 120 units per wallet)
+   0.10% wallets/day (1,000 wallets): exit cap   5%/round, flag 60%/round ->  7.9% of each stolen balance leaves = about 9,536 units/day (assumed 120 units per wallet)
+   (Model from blur_sim part C; the flag is only useful when the per-round exit cap is small.)
+
+S6) LOAD, BLUR, FALSE FLAGS, TREASURY (assumed activity: 0.3 transactions per user per day, peak x50)
+   300,000 tx/day = 3.5 tx/s average, 174 tx/s at peak; trades per 60 s round at average: 208 (blur needs >= 20)
+   false flag 0.01%/wallet/day, lasts 1 day -> 100 honest wallets blocked on any day
+   false flag 0.10%/wallet/day, lasts 1 day -> 1,000 honest wallets blocked on any day
+   Treasury: presale raise = 30M DK at about 1.27 units; reserve 75%; withdrawal cap 0.5%/week (v4). Agent bill per month needs:
+   unit = $0.0005: raise $19,050, reserve $14,288, weekly cap $71 = $309/month   (AI bill $25 / $97 / $378 per month)
+   unit = $0.001: raise $38,100, reserve $28,575, weekly cap $143 = $619/month   (AI bill $25 / $97 / $378 per month)
+   unit = $0.005: raise $190,500, reserve $142,875, weekly cap $714 = $3,093/month   (AI bill $25 / $97 / $378 per month)
+
+NOT MODELED: real prices and SOL/USD, wallet behaviour beyond simple random rules, outside DEX trades, MEV, the AI committee's decisions, network failures, legal events.
+
+real	0m34.546s
+user	0m33.482s
+sys	0m0.745s

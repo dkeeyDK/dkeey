@@ -1,0 +1,30 @@
+1) COVER TRADES. Chance an observer links a real seller to its buyer = 1 / (real + dummies not recognised)
+   real trades per round = 3; cost = dummy trades paid for per round
+   dummies | observer can spot  0%   50%   90% of dummies
+         0 |                  33.3% 33.3% 33.3%
+         5 |                  12.5% 18.2% 28.6%
+        17 |                   5.0%  8.7% 21.3%
+        97 |                   1.0%  1.9%  7.9%
+   Caveat: dummies funded by the core are easy to spot on chain; they must come from real users (volunteers, self-trades) to be worth anything.
+
+2) DELAY-AND-CANCEL. Stolen wallet; cap = 20% of the balance per round (requests), flag chance per round p.
+   An exit request matures D rounds later; a flag cancels all pending and blocks the rest.
+   delay D \ flag chance        10%     30%     60%
+     0 rounds              64.2%   31.7%   11.8%
+     2 rounds              51.7%   15.4%    1.9%
+     6 rounds              34.3%    3.9%    0.0%
+    12 rounds              18.4%    0.4%    0.0%
+   Price: every honest large exit also waits D rounds (the owner can cancel a stolen request, too).
+
+3) SPLIT VIEW. The core is n=8 seats. Share of trades whose pairing a compromised group can see.
+   compromised seats | each seat sees only its 1/8 | full mapping needs 6-of-8 shared (secret sharing)
+                   0 |                          0% | 0%
+                   1 |                         12% | 0%
+                   2 |                         25% | 0%
+                   3 |                         38% | 0%
+                   4 |                         50% | 0%
+                   5 |                         62% | 0%
+                   6 |                         75% | 100%
+                   7 |                         88% | 100%
+                   8 |                        100% | 100%
+   Secret-sharing protects better but needs multi-party computation to MATCH trades; the split view needs no new cryptography.

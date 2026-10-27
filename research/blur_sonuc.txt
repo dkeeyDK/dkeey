@@ -1,0 +1,28 @@
+A) Share of correct guesses from commitments alone (k=20, random = 5.0%): 4.9%
+
+B) Observer's share of correctly linked pairs (random guess = 1/k)
+   k per round ->                   2       5      20     100
+   amounts public, exact units, in order           100.0%  100.0%  100.0%  100.0%
+   amounts public, round to 100, in order           97.5%   90.2%   66.6%   31.8%
+   amounts public, fixed lots of 1000, shuffled     70.5%   42.5%   20.3%    8.2%
+   amounts hidden, in order (timing leaks)         100.0%  100.0%  100.0%  100.0%
+   amounts hidden, batch shuffled                   52.0%   17.2%    5.4%    1.1%
+   random-guess baseline:               50.0%   20.0%    5.0%    1.0%
+
+C) Stolen wallet: share of its balance that leaves before the flag works
+   exit cap per round (share of balance) vs. chance per round that the flag is raised
+   cap \ flag chance        10%     30%     60%     90%
+       5%                 34.5%   14.9%    8.1%    5.5%
+      20%                 71.4%   45.3%   29.4%   21.7%
+     100%                100.0%  100.0%  100.0%  100.0%
+
+D) Honest wallets blocked by false flags (assumed false-flag rate per wallet per round, flag lasts L rounds)
+   false-flag rate 0.1%/round, lasts  3 rounds -> share of time a wallet is blocked: 0.30%
+   false-flag rate 0.1%/round, lasts 12 rounds -> share of time a wallet is blocked: 1.19%
+   false-flag rate 0.5%/round, lasts  3 rounds -> share of time a wallet is blocked: 1.48%
+   false-flag rate 0.5%/round, lasts 12 rounds -> share of time a wallet is blocked: 5.66%
+   false-flag rate 2.0%/round, lasts  3 rounds -> share of time a wallet is blocked: 5.66%
+   false-flag rate 2.0%/round, lasts 12 rounds -> share of time a wallet is blocked: 19.35%
+
+NOT MODELED: a compromised or colluding core sees the whole mapping (blur hides only from outsiders);
+wallet-level clustering by other chain data; DEX-side trades (outside our pool); real timing noise.
