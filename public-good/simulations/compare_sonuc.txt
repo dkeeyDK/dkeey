@@ -1,0 +1,52 @@
+KARSILASTIRMA: Gemini 'QEF' tasarimi (spesifikasyon metnindeki haliyle) vs DK merdiven tasarimi vs duz AMM (referans)
+Not: QEF'te T_B dis DEX'te (AMM) islem gorur; T_A/P_A sadece muhasebedir. Spesifikasyonda T_A'nin disarida bir degeri ya da T_B'yi satin alan bir mekanizma YOK.
+
+S1) CIKIS: tokenlarin x'i tek seferde satilirsa sahipler, satis oncesi (isaretli) degerlerinin yuzde kacini alir?
+    AMM/QEF: havuz derinligi d = havuzdaki para / piyasa degeri, ucret %0.3. QEF as-written = AMM (destek 0). DK: merdiven yarisi dolu (63/127 bin), saticilar egriden asagi iner, %0.5 spread.
+ satilan x |  AMM/QEF d=5%   d=20%   d=50% | DK merdiven
+        5% |         49.9%   79.8%   90.7% |       96.5%
+       10% |         33.3%   66.5%   83.1% |       93.5%
+       30% |         14.3%   40.0%   62.4% |       83.0%
+       60% |          7.7%   25.0%   45.4% |       70.0%
+ DK merdiven rezervi / piyasa degeri = 57% (kendi derinligi; esdeger AMM d≈%57). Bu rezerv herkesin cikis egrisini kapsar (kurala gore).
+ DK cikis HIZI: gunluk limit arzin %2'si, ladder'in yarisi dolu -> sahiplerin %30'u (arzin %15'i) ~7.5 gunde cikar (AMM: tek blokta ama yukaridaki fiyatla).
+
+S2) SANDVIC (MEV): saldirgan, kurbanin alisinin onune/arkasina girer. Kurban fiyat toleransi %1. Kar, kurban islem degerinin yuzdesi (negatif = saldiri zararli):
+ kurban/piyasa degeri | AMM d=20% kar kurban kaybi | DK kurban/bin   DK kar kurban kaybi
+                1e-06 |        0.000%       0.000% |        0.0001   0.000%       0.000%
+                1e-05 |        0.000%       0.000% |        0.0010   0.000%       0.000%
+                1e-04 |        0.000%       0.000% |        0.0099   0.000%       0.000%
+                1e-03 |        0.393%       0.998% |        0.0993   0.000%       0.000%
+                1e-02 |        0.977%       0.996% |        0.9934   0.743%       1.000%
+ Okuma: iki sistemde de kucuk islemler sandvicle karsiz (ucret/spread asilamiyor). Esik: AMM (derinlik %20) ~piyasa degerinin %0.1'i; DK merdiveni ~1 bin (~%1-2). Yani DK esigi ~10 kat yuksek, ama buyuk (balina) alislar DK'de de savunmasiz: cozum round modu (toplu, tek fiyat).
+
+S3) QEF 'DEVRE KESICI': kaos = (hacim x prevrandao / 10^4) mod sigma; esik tau'yi asarsa 'Gozlem Modu'. mod sigma yuzunden her islemin tetikleme olasiligi hacimden BAGIMSIZ ~ (sigma-tau)/sigma.
+  tetik olasiligi   1%/islem:
+    gunluk   1,000 islem -> gunde        10 tetik; 10 dk bekleme varsayimiyla zamanin ~  6.7%'i dondurulmus
+    gunluk  10,000 islem -> gunde       100 tetik; 10 dk bekleme varsayimiyla zamanin ~ 50.1%'i dondurulmus
+    gunluk 300,000 islem -> gunde     3,000 tetik; 10 dk bekleme varsayimiyla zamanin ~100.0%'i dondurulmus
+    saldirgan maliyeti: tetiklemek icin ~100 kucuk islem x %0.3 ucret x 1 birim = ~0.30 birim
+  tetik olasiligi   5%/islem:
+    gunluk   1,000 islem -> gunde        50 tetik; 10 dk bekleme varsayimiyla zamanin ~ 29.3%'i dondurulmus
+    gunluk  10,000 islem -> gunde       500 tetik; 10 dk bekleme varsayimiyla zamanin ~ 96.9%'i dondurulmus
+    gunluk 300,000 islem -> gunde    15,000 tetik; 10 dk bekleme varsayimiyla zamanin ~100.0%'i dondurulmus
+    saldirgan maliyeti: tetiklemek icin ~20 kucuk islem x %0.3 ucret x 1 birim = ~0.06 birim
+  tetik olasiligi  10%/islem:
+    gunluk   1,000 islem -> gunde       100 tetik; 10 dk bekleme varsayimiyla zamanin ~ 50.1%'i dondurulmus
+    gunluk  10,000 islem -> gunde     1,000 tetik; 10 dk bekleme varsayimiyla zamanin ~ 99.9%'i dondurulmus
+    gunluk 300,000 islem -> gunde    30,000 tetik; 10 dk bekleme varsayimiyla zamanin ~100.0%'i dondurulmus
+    saldirgan maliyeti: tetiklemek icin ~10 kucuk islem x %0.3 ucret x 1 birim = ~0.03 birim
+ Okuma: esik normal kullanimda da surekli asilir; sistem ya surekli donuk ya da esik kapatilirsa koruma sifir. DK'de karsilik: limit varlik payina gore paylasildiginda saldirgan para payi kadar engeller (unique_sonuc A2).
+ Fuzz (delta): yalniz P_A'ya eklenir; P_A piyasa fiyatini belirlemez (fiyat DEX'te). Dolayisiyla arbitraj botlarini etkilemez; ayrica girdileri (hacim, prevrandao) islemden once bilinir -> bot hesaplayabilir.
+
+OZET TABLO (simule edilen + spesifikasyonun kendisi)
+ - Gercek teminat / cikis garantisi: QEF -> YOK (P_A tanim geregi; T_B'yi destekleyen odeme yok) | DK -> Var (rezerv ≈ %57 piyasa degeri, egriden odeme)
+ - %30 satista geri alinan deger: QEF -> %14-62 (derinlige bagli) | DK -> %83
+ - Cikis hizi: QEF -> Aninda ama dusuk fiyat | DK -> Yavas (limit: ~7.5 gun) 
+ - Cikis engelleme direnci: QEF -> Zayif: devre kesici ~her islemde tetiklenir | DK -> Orta: limit varlik payina gore (para payi kadar engel)
+ - Sandvic: QEF -> Karsiz kucukte; esik ~%0.1 piyasa degeri | DK -> Karsiz kucukte; esik ~%1-2 (10x yuksek); balina alislari acik
+ - Rastgelelik/kalkan: QEF -> Ongorulebilir, etkisiz | DK -> Yok iddiasi yok; blur ayri katman
+ - Platform: QEF -> Ethereum/Solidity | DK -> Solana (mevcut proje)
+ - Zayif noktalar: QEF -> Dairesel muhasebe, tek hata noktasi | DK -> Gec satanlar kaybeder (bonding curve), yavas cikis, sybil, denetim yok
+
+MODELLENMEDI: gercek fiyat/talep, dis likidite, MEV rekabeti, QEF'in 'duzeltilmis' (gercek rezervli) bir surumu, DK'nin talep sokunda surdurulebilirligi.
